@@ -6,11 +6,12 @@ import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
 
-const Projects = () => {
+const Projects = (props) => {
   const { projects } = useContext(PortfolioContext);
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const {projectlist} = props.props.data
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -27,7 +28,7 @@ const Projects = () => {
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />
-          {projects.map((project) => {
+          {projectlist.map((project) => {
             const { title, info, info2, url, repo, img, id } = project;
 
             return (

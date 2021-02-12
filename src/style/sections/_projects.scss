@@ -3,6 +3,7 @@
   color: $dark-blue-text;
   margin-top: -15rem;
   padding-top: 15rem;
+  
 
   @include respond(tab-land) {
     margin-top: 0;
@@ -12,6 +13,9 @@
   .project-wrapper {
     margin-bottom: 15rem;
 
+  .skill {
+    border-radius: 50%;
+  }
     @include respond(phone) {
       margin-bottom: 0rem;
     }

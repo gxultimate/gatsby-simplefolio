@@ -4,13 +4,13 @@ import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 
-const Header = () => {
+const Header = (props) => {
   const { hero } = useContext(PortfolioContext);
-  const { title, name, subtitle, cta } = hero;
+  const { title,  subtitle, cta } = hero;
+  const {name , job} = props.props.data
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     if (window.innerWidth > 769) {
       setIsDesktop(true);
@@ -21,15 +21,17 @@ const Header = () => {
     }
   }, []);
 
+
   return (
     <section id="hero" className="jumbotron">
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
-            {title || 'Hi, my name is'}{' '}
-            <span className="text-color-main">{name || 'Your Name'}</span>
+            {title|| 'Hi, my name is'}{' '}
+            <span className="text-color-main">{  name|| 'Your Name'}</span>
             <br />
-            {subtitle || "I'm the Unknown Developer."}
+            {job || "I'm the Unknown Developer."}
+            <img src="https://media.giphy.com/media/DVzgDqMj7B6KxFWTlL/giphy.gif" style={{width:'7rem', height:'6rem' , marginLeft:'2rem'}} alt='loading...'/>
           </h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
