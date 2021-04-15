@@ -1,13 +1,15 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { Container } from 'react-bootstrap';
+import React, { useContext, useEffect, useState } from 'react';
+import { Container, Form } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 
-const Header = (props) => {
+const Header = ({props ,setDark,isDark}) => {
+
   const { hero } = useContext(PortfolioContext);
-  const { title,  subtitle, cta } = hero;
-  const {name , job} = props.props.data
+ 
+  const { title, subtitle, cta } = hero;
+  const { name, job } = props.data;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -22,19 +24,25 @@ const Header = (props) => {
   }, []);
 
 
+
   return (
-    <section id="hero" className="jumbotron">
+    <section id={isDark ? 'hero-dark' : 'hero'} className="jumbotron">
       <Container>
-        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="100px">
           <h1 className="hero-title">
-            {title|| 'Hi, my name is'}{' '}
-            <span className="text-color-main">{  name|| 'Your Name'}</span>
+            {title || 'Hi, my name is '}
+            <span className="text-color-main">{name || 'Your Name'}</span>
             <br />
             {job || "I'm the Unknown Developer."}
-            <img src="https://media.giphy.com/media/DVzgDqMj7B6KxFWTlL/giphy.gif" style={{width:'7rem', height:'6rem' , marginLeft:'2rem'}} alt='loading...'/>
+            <img
+              onClick={setDark}
+              src={!isDark?"https://media.giphy.com/media/h8xE5ALopE7a9nGVIu/giphy.gif":"https://media.giphy.com/media/eGmgF0V90QIgpMv4WQ/giphy.gif"}
+              style={{ width: '7rem', height: '6rem', marginLeft: '2rem' }}
+              alt="loading..."
+            />
           </h1>
         </Fade>
-        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="100px">
           <p className="hero-cta">
             <span className="cta-btn cta-btn--hero">
               <Link to="about" smooth duration={1000}>

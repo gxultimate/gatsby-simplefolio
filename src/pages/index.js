@@ -6,7 +6,7 @@ import '../style/main.scss';
 import { graphql } from 'gatsby'
 
 
-export const pageQuery = graphql`
+export const pageQuery = graphql `
   query BlogIndexQuery {
     allMarkdownRemark{
       edges{
@@ -40,19 +40,26 @@ export const pageQuery = graphql`
 `
 
 
-export default ({data}) => {
-  const { title, lang, description } = data.allMarkdownRemark.edges[0].node.frontmatter;
+export default ({ data }) => {
+    const { title, lang, description } = data.allMarkdownRemark.edges[0].node.frontmatter;
 
 
-  return (
-    <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{title || 'Gatsby Simplefolio'}</title>
-        <html lang={lang || 'en'} /> 
-        <meta name="description" con  tent={description || 'Gatsby Simplefolio'} />
-      </Helmet>
-      <App data={data.allMarkdownRemark.edges[0].node.frontmatter}/>
-    </>
-  );
+    return ( <
+        >
+        <
+        Helmet >
+        <
+        meta charSet = "utf-8" / >
+        <
+        title > { title || 'Gatsby Simplefolio' } < /title> <
+        html lang = { lang || 'en' }
+        />  <
+        meta name = "description"
+        con tent = { description || 'Gatsby Simplefolio' }
+        /> <
+        /Helmet> <
+        App data = { data.allMarkdownRemark.edges[0].node.frontmatter }
+        /> <
+        />
+    );
 };

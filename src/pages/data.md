@@ -3,8 +3,8 @@ title: 'Ralph Gabriel'
 bit: '../components/images/giphy.gif'
 lang: ''
 name: 'Ralph Gabriel L. Alquisada'
-job: 'Im a Junior MERN stack Developer'
-description: 'Hello , Im Ralph Gabriel Alquisada Im a Junior MERN Stack Developer based in Iloilo City , Philippines.'
+job: 'Im a Junior MERN Stack Developer'
+description: 'Hello, Im Ralph Gabriel Alquisada Im a Junior MERN Stack Developer based in Iloilo City, Philippines.'
 descriptiontwo: 'Im very commited and passionate to my projects.'
 descriptionthree: 'With more than a year of experience with being a MERN Stack Developer, I have achieved the skills to build great and responsive websites.'
 projectlist:
@@ -36,7 +36,7 @@ skills:
   {
     'title': 'Python (Flask)', 
     'desc': 'Web Server Gateway Interface (WSGI) web application framework',
-    'img': 'flask.jpg',
+    'img': 'flask.png',
     'id': '0'
   },
   {

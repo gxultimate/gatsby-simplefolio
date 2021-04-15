@@ -11,11 +11,16 @@ import { PortfolioProvider } from '../context/context';
 import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
 
 function App(props) {
+  const [isDark, setDark] = useState(false);
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
+  const setDarkMode = (v) => {
+      setDark(!isDark)
+      
+  }
 
   useEffect(() => {
     setHero({ ...heroData });
@@ -26,13 +31,13 @@ function App(props) {
   }, []);
 
   return (
-    <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
-      <Hero props={props} />
-      <About props={props} />
-      <Projects props={props} />
-      <Skills props={props}/>
-      <Contact props={props} />
-      <Footer props={props} />
+    <PortfolioProvider value={{ hero, about, projects, contact, footer ,isDark}}>
+      <Hero props={props} setDark={setDarkMode} isDark={isDark}/>
+      <About props={props}  isDark={isDark} />
+      <Projects props={props}  isDark={isDark} />
+      <Skills props={props }  isDark={isDark}/>
+      <Contact props={props}  isDark={isDark}/>
+      <Footer props={props}  isDark={isDark} />
     </PortfolioProvider>
   );
 }

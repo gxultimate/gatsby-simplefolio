@@ -6,12 +6,12 @@ import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
 
-const Projects = (props) => {
+const Projects = ({props,isDark}) => {
   const { projects } = useContext(PortfolioContext);
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const {projectlist} = props.props.data
+  const { projectlist } = props.data;
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -24,7 +24,7 @@ const Projects = (props) => {
   }, []);
 
   return (
-    <section id="projects">
+    <section id={isDark?"projects-dark":"projects"}>
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />
@@ -39,7 +39,7 @@ const Projects = (props) => {
                     bottom={isMobile}
                     duration={1000}
                     delay={500}
-                    distance="30px"
+                    distance="100px"
                   >
                     <div className="project-wrapper__text">
                       <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
@@ -78,7 +78,7 @@ const Projects = (props) => {
                     bottom={isMobile}
                     duration={1000}
                     delay={1000}
-                    distance="30px"
+                    distance="100px"
                   >
                     <div className="project-wrapper__image">
                       <a

@@ -1,17 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
-import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
-import Title from '../Title/Title';
 import SkillImg from '../Image/SkillImg';
+import Title from '../Title/Title';
 
-const Skills = (props) => {
+const Skills = ({props ,isDark}) => {
   const { projects } = useContext(PortfolioContext);
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const { skills } = props.props.data;
+  const { skills } = props.data;
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -24,7 +24,7 @@ const Skills = (props) => {
   }, []);
 
   return (
-    <section id="projects">
+    <section id={isDark?"projects-dark":"projects"}>
       <Container>
         <div className="project-wrapper">
           <Title title="Skills" />
@@ -41,7 +41,7 @@ const Skills = (props) => {
                       bottom={isMobile}
                       duration={1000}
                       delay={500}
-                      distance="30px"
+                      distance="100px"
                     >
                       <div className="project-wrapper__text">
                         <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
@@ -60,11 +60,10 @@ const Skills = (props) => {
                       bottom={isMobile}
                       duration={1000}
                       delay={1000}
-                      distance="30px"
+                      distance="100px"
                     >
                       <div className="project-wrapper__image" style={{marginBottom:'4rem'}}>
                         <a
-                          // href={url || '#!'}
                           target="_blank"
                           aria-label="Project Link"
                           rel="noopener noreferrer"
