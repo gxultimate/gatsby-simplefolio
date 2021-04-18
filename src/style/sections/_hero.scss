@@ -26,7 +26,10 @@
   @include respond(phone) {
     padding: 0rem $default-font-size;
   }
-
+  // .hero-navbar{
+  //   background: linear-gradient(to right,$white-color 50%, $dark-color 50%) left;
+  // }
+  
   .hero-title {
     font-size: 5rem;
     font-weight: 700;
@@ -97,7 +100,9 @@
   @include respond(phone) {
     padding: 0rem $default-font-size;
   }
- 
+  // .hero-dark-navbar{
+  //   background: linear-gradient(to left,$dark-color 50%, $white-color 50%) right;
+  // }
   .hero-title {
     font-size: 5rem;
     font-weight: 700;
