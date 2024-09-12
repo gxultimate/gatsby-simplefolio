@@ -7,7 +7,7 @@ import SkillImg from '../Image/SkillImg';
 import Title from '../Title/Title';
 
 const Experience = ({props ,isDark}) => {
-  const { experience } = useContext(PortfolioContext);
+  const { projects } = useContext(PortfolioContext);
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
