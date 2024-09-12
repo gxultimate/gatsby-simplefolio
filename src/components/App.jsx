@@ -34,8 +34,8 @@ function App(props) {
     <PortfolioProvider value={{ hero, about, projects, contact, footer ,isDark}}>
       <Hero props={props} setDark={setDarkMode} isDark={isDark}/>
       <About props={props}  isDark={isDark} />
+       <Skills props={props }  isDark={isDark}/>
       <Projects props={props}  isDark={isDark} />
-      <Skills props={props }  isDark={isDark}/>
       <Contact props={props}  isDark={isDark}/>
       <Footer props={props}  isDark={isDark} />
     </PortfolioProvider>
