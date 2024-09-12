@@ -3,10 +3,15 @@ title: 'Ralph Gabriel'
 bit: '../components/images/giphy.gif'
 lang: ''
 name: 'Ralph Gabriel L. Alquisada'
-job: 'Im a Junior MERN Stack Developer'
-description: 'Hello, Im Ralph Gabriel Alquisada Im a Junior MERN Stack Developer based in Iloilo City, Philippines.'
+job: 'Im a Business Intelligence Developer'
+description: 'Hello, Im Ralph Gabriel Alquisada Im a Business Intelligence Developer based in Iloilo City, Philippines.'
 descriptiontwo: 'Im very commited and passionate to my projects.'
-descriptionthree: 'With more than a year of experience with being a MERN Stack Developer, I have achieved the skills to build great and responsive websites.'
+descriptionthree: 'With more than 3 years of experience with being a Business Intelligence Developer, I have achieved the skills necessary to provide BI and data analytics solutions'
+experiences: ['MERN STACK Developer - December 2019 - July 2021', 
+'Freelance Web Developer - July 2021 - December 2021',
+'Business Intelligence Intern - September 2021 - March 2022',
+'Junior Business Intelligence Developer - March 2022 - June 2024'
+]
 projectlist:
   [
     {
