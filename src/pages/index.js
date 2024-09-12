@@ -32,6 +32,10 @@ export const pageQuery = graphql `
               desc
               img
             }
+            experience {
+            title
+            duration
+            }
           }
         }
       }
