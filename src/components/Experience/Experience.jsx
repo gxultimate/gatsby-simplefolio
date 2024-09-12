@@ -35,7 +35,7 @@ const Experience = ({props ,isDark}) => {
 
               return (
                 <>
-                  <Col lg={3} sm={6}>
+                  <Col lg={2} sm={4}>
                     <Fade
                       left={isDesktop}
                       bottom={isMobile}
