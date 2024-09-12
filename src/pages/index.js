@@ -32,7 +32,7 @@ export const pageQuery = graphql `
               desc
               img
             }
-            experience {
+            experience{
             title
             duration
             }
