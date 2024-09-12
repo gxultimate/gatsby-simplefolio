@@ -16,6 +16,7 @@ function App(props) {
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
+  const [experience, setExperience] = useState([]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
   const setDarkMode = (v) => {
