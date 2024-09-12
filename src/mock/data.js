@@ -80,6 +80,22 @@ export const experienceData = [
     url: '',
     repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
   },
+   {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: '',
+    duration: '',
+    url: '',
+    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+  },
+   {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: '',
+    duration: '',
+    url: '',
+    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+  }
 ];
 
 // CONTACT DATA
