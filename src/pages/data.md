@@ -7,7 +7,7 @@ job: 'Im a Business Intelligence Developer'
 description: 'Hello, Im Ralph Gabriel Alquisada Im a Business Intelligence Developer based in Iloilo City, Philippines.'
 descriptiontwo: 'Im very commited and passionate to my projects.'
 descriptionthree: 'With more than 3 years of experience with being a Business Intelligence Developer, I have achieved the skills necessary to provide BI and data analytics solutions'
-experiences: [
+experience: [
 { 
 'title':'MERN STACK Developer (StartUp Project Ventures)' ,
 'duration': 'December 2019 - July 2021'
